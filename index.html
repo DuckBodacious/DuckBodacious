@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doc Bodacious — YoYo Magic</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #0a1628;
+      color: #e0eeff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Header ── */
+    header {
+      width: 100%;
+      background: #0d1f3c;
+      border-bottom: 2px solid #1e4fa3;
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #5badff;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #a0c4ff;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 90px 20px 60px;
+      max-width: 720px;
+    }
+
+    .yoyo-icon {
+      font-size: 5rem;
+      margin-bottom: 20px;
+      animation: spin 4s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: #5badff;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #88aacc;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      background: #1e4fa3;
+      color: #ffffff;
+      border: none;
+      padding: 14px 36px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #2563cc;
+      transform: translateY(-2px);
+    }
+
+    /* ── Section ── */
+    section {
+      width: 100%;
+      max-width: 960px;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      color: #5badff;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    /* ── Cards ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #0d1f3c;
+      border: 1px solid #1e3d6e;
+      border-radius: 10px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #5badff;
+      transform: translateY(-4px);
+    }
+
+    .card .icon {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      color: #c8dcff;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: #6a90bc;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ── About strip ── */
+    .about-strip {
+      background: #0d1f3c;
+      border-top: 1px solid #1e3d6e;
+      border-bottom: 1px solid #1e3d6e;
+      padding: 60px 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-inner {
+      max-width: 680px;
+      text-align: center;
+    }
+
+    .about-inner h2 {
+      font-size: 1.8rem;
+      color: #5badff;
+      margin-bottom: 18px;
+    }
+
+    .about-inner p {
+      color: #88aacc;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ── Contact ── */
+    .contact {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .contact h2 {
+      font-size: 1.8rem;
+      color: #5badff;
+      margin-bottom: 16px;
+    }
+
+    .contact p {
+      color: #88aacc;
+      margin-bottom: 28px;
+    }
+
+    .contact a.btn {
+      margin: 0 8px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      width: 100%;
+      background: #060e1c;
+      border-top: 1px solid #1e3d6e;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: #3a5a84;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🪀 Doc Bodacious</div>
+    <nav>
+      <a href="#tricks">Tricks</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="yoyo-icon">🪀</div>
+    <h1>Welcome to <span>YoYo Magic</span></h1>
+    <p>
+      Spinning wonders, defying gravity, and bringing pure joy — one throw at a time.
+      Doc Bodacious is here to take you on a magical yoyo journey.
+    </p>
+    <a href="#tricks" class="btn">See the Magic</a>
+  </div>
+
+  <!-- Tricks Section -->
+  <section id="tricks">
+    <h2>Signature Tricks</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>The Bodacious Loop</h3>
+        <p>Doc's signature move — a seamless five-loop combination that leaves audiences breathless.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌀</div>
+        <h3>Gravity Pull</h3>
+        <p>A gravity-defying string trick that looks like pure sorcery. No strings attached… well, almost.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>Blue Lightning</h3>
+        <p>Speed tricks that blur the eye. Named after Doc's trademark blue yoyo that started it all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <div class="about-strip" id="about">
+    <div class="about-inner">
+      <h2>About Doc Bodacious</h2>
+      <p>
+        Doc Bodacious has been mastering the art of the yoyo for over two decades. Known for combining
+        technical precision with theatrical flair, Doc performs at events, festivals, and theaters worldwide.
+        The mission is simple: spread joy, one spin at a time.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Booking, questions, or just want to say hello? Doc Bodacious would love to hear from you.</p>
+    <a href="mailto:doc@yoyomagic.com" class="btn">Send a Message</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Doc Bodacious — YoYo Magic. All rights reserved.
+  </footer>
+
+</body>
+</html>
